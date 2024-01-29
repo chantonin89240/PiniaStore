@@ -2,7 +2,7 @@
 ## Table des matières
 
 * [Introduction](#introduction)
-* [Mise en place](#miseEnPlace)
+* [Mise en place](#miseenplace)
 * [Utilisation](#utilisation)
 
 ------------------
@@ -25,7 +25,7 @@ Par exemple, vous n’avez pas besoin de vous soucier de la sérialisation ni de
 Pinia prend en charge Nuxt Bridge et Nuxt 3.
 
 ------------------
-## <a id="miseEnPlace">Mise en place</a>
+## <a id="miseenplace">Mise en place</a>
 
 Vous avez deux possibilités pour l'installation des paquets : 
 * soit avec Yarn :

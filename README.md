@@ -37,14 +37,14 @@ yarn add pinia @pinia/nuxt
 npm install pinia @pinia/nuxt
 ```
 Vous retrouverez dans le fichier package.json les dépendances envers Pinia.
-```
+```ts
 "dependencies": {
     "@pinia/nuxt": "^0.5.1",
     "pinia": "^2.1.7"
   }
 ```
 Pour finir, il reste à ajouter dans le fichier nuxt.config.js l'appel de Pinia dans les modules.
-```
+```ts
 modules: [
     '@pinia/nuxt',
   ]
@@ -59,7 +59,7 @@ Tout d'abord, il faut ajouter un dossier "store" puis créer le fichier.
 ![image](https://github.com/chantonin89240/PiniaStore/assets/49941533/69bad30c-0aa8-4b30-8dae-7b1df8f50adc)
 
 Premièrement, nous devons initialiser la définition du store.
- ```
+ ```ts
 const runtimeConfig = useRuntimeConfig()
 export const useCatalogStore = defineStore('catalogStore', {
 
@@ -70,7 +70,7 @@ Ensuite, il faut gérer la partie "état", qui constitue la partie centrale du s
 
 Dans Pinia, l'état est défini sous forme d'une fonction qui renvoie l'état initial. Cela permet à Pinia de fonctionner aussi bien côté serveur que côté client.
 
-```
+```ts
 export const useCatalogStore = defineStore('catalogStore', {
   state: (): Provider => ({
         provider: null,
@@ -87,7 +87,7 @@ Ils peuvent être définis à l'aide de la propriété.
 
 Il s'agit des propriétés qui seront utilisées dans notre page.
 
-```
+```ts
 getters: {
     resultProvider: (state) => state.provider,
     resultStatut: (state) => state.statutAdd,
@@ -96,7 +96,7 @@ getters: {
 
 La dernière étape de notre store concerne les actions. Les actions sont l'équivalent des méthodes dans les composants.
 
-```
+```ts
 actions: {
   async searchProvider(search: string) {
     const { data, pending, error, status } = await useFetch<Track[]>(runtimeConfig.public.apiBase + '/catalogs/search/' + search, {
@@ -112,20 +112,20 @@ Dans ce code, nous allons effectuer l'appel à notre recherche Deezer depuis une
 Maintenant, il est temps d'utiliser notre store dans la page des catalogues.
 
 Nous devons d'abord appeler et initialiser le store.
-```
+```ts
 import { useCatalogStore } from '../../stores/CatalogStore';
 const catalogStore = useCatalogStore();
 ```
 
 Ensuite, il faut construire les propriétés.
-```
+```ts
 const search = ref('')
 const searchSong = ref('');
 const songs = ref([]);
 ```
 
 Enfin, il faut créer la méthode qui va utiliser le store pour effectuer la recherche Deezer.
-```
+```ts
 const validateSearch = async () => {
   const searchData = {
     result: search.value
@@ -139,7 +139,7 @@ const validateSearch = async () => {
 
 La dernière étape consiste à mettre en place l'affichage des éléments de recherche, y compris le formulaire ainsi que l'affichage des résultats.
 
-```
+```ts
 <template>
   <div>
     <!-- partie recherche et provider  -->

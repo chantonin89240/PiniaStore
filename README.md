@@ -187,4 +187,5 @@ La dernière étape consiste à mettre en place l'affichage des éléments de re
 
 ```
 
+Merci de vous être intéressé à ce tutoriel. J'espère qu'il a été utile pour vous. Si vous souhaitez obtenir plus de détails, n'hésitez pas à consulter la documentation de Pinia -> [Lien](https://pinia.vuejs.org) 
 

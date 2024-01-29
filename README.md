@@ -1,11 +1,12 @@
 # PiniaStore avec nuxt 3
 ## Table des matières
 
-* Introduction
-* Mise en place
-* Utilisation
+* [Introduction](#introduction)
+* [Mise en place](#miseEnPlace)
+* [Utilisation](#utilisation)
+
 ------------------
-## Introduction 
+## <a id="introduction">Introduction</a>
 
 Pinia constitue un système de gestion d'état dédié à Vue.js, offrant une approche simple et performante pour gérer l'état global d'une application.
 
@@ -24,7 +25,7 @@ Par exemple, vous n’avez pas besoin de vous soucier de la sérialisation ni de
 Pinia prend en charge Nuxt Bridge et Nuxt 3.
 
 ------------------
-## Mise en place
+## <a id="miseEnPlace">Mise en place</a>
 
 Vous avez deux possibilités pour l'installation des paquets : 
 * soit avec Yarn :
@@ -49,7 +50,7 @@ modules: [
   ]
 ```
 ------------------
-## Utilisation
+## <a id="utilisation">Utilisation</a>
 
 Nous allons prendre l'exemple d'une application de jukebox digital pour créer un store et effectuer une recherche sur Deezer en utilisant une API.
 

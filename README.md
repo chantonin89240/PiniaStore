@@ -139,7 +139,7 @@ const validateSearch = async () => {
 
 La dernière étape consiste à mettre en place l'affichage des éléments de recherche, y compris le formulaire ainsi que l'affichage des résultats.
 
-```ts
+```vue
 <template>
   <div>
     <!-- partie recherche et provider  -->
